@@ -2,6 +2,9 @@
 using System.Windows.Forms;
 using HarmonyLib;
 using TaleWorlds.MountAndBlade;
+using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using CompanionHoarder;
 
 namespace ComapanionHoarder
 {
@@ -26,7 +29,17 @@ namespace ComapanionHoarder
                 MessageBox.Show(str + message + str2 + ((innerException != null) ? innerException.Message : null));
             }
         }
-		
-	}
-	
+
+       
+        protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
+        {
+            if (!(game.GameType is Campaign))
+                return;
+            CampaignGameStarter gameInitializer = (CampaignGameStarter)gameStarterObject;
+
+            gameInitializer.AddBehavior(new CompanionHoarderBehavior());
+        }
+    }
+
 }
+	

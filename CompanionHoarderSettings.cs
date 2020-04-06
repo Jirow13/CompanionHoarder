@@ -1,7 +1,7 @@
 ﻿using System.Xml;
 using TaleWorlds.Library;
 
-namespace ComapanionHoarder
+namespace CompanionHoarder
 {
     class CompanionHoarderSettings
     {
@@ -12,9 +12,9 @@ namespace ComapanionHoarder
         public CompanionHoarderSettings()
         {
             XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load(BasePath.Name + "Modules/ClanTweaker/Config.xml");
+            xmlDocument.Load(BasePath.Name + "Modules/CompanionHoarder/Config.xml");
 
-            foreach (object obj in xmlDocument.SelectSingleNode("ClanTweaker").ChildNodes)
+            foreach (object obj in xmlDocument.SelectSingleNode("CompanionHoarder").ChildNodes)
             {
                 XmlNode xmlNode = (XmlNode)obj;
                 string text = xmlNode.Name.ToLower();

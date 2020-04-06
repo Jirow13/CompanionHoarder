@@ -49,6 +49,7 @@
     <Reference Include="TaleWorlds.MountAndBlade, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanionHoarderBehavior.cs" />
     <Compile Include="CompanionHoarderCompanions.cs" />
     <Compile Include="CompanionHoarderSettings.cs" />
     <Compile Include="CompanionHoarderSubModule.cs" />
