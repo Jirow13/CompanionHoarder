@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CompanionHoarder>
+<!-- Companion Settings -->
+	<!-- default: use vanilla game values -->
+	<!-- number: The amount of Companions to spawn on the world map -->
+	<CompanionHoarderMode>modifier</CompanionHoarderMode>
+	<CompanionNumber>20</CompanionNumber>
+
+
+
+
+</CompanionHoarder>

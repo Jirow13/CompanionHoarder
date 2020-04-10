@@ -1,0 +1,33 @@
+<Module>
+  <Name value="Companion Hoarder"/>
+  <!-- This is the name of the mod in the launcher -->
+  <Id value="CompanionHoarder"/>
+  <!-- This is the name of the mod folder -->
+  <Version value="v1.0.2"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+ 
+  <DependedModules>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="CustomBattle"/>
+    <DependedModule Id="StoryMode" />
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="Companion_Hoarder"/>
+      <!-- This is the name next to namespace in the code -->
+      <DLLName value="Companion Hoarder.dll"/>
+      <!--This is the name of your dll-->
+      <SubModuleClassType value="Companion_Hoarder.CompanionHoarderSubModule"/>
+      <!--This is the name next to namespace . the name next to class -->
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+        <Tag key="IsNoRenderModeElement" value="false" />
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls>
+  </Xmls>
+</Module>
