@@ -1,15 +1,14 @@
 ﻿using System.Xml;
 using TaleWorlds.Library;
 
-namespace CompanionHoarder
+namespace Companion_Hoarder
 {
     class CompanionHoarderSettings
     {
-        public string companionMode;
-        public int CompanionNumber, CompanionLimit;
+        public string CompanionHoarderMode;
+        public int  CompanionNumber;
 
-        
-        public CompanionHoarderSettings()
+         public CompanionHoarderSettings()
         {
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(BasePath.Name + "Modules/CompanionHoarder/Config.xml");
@@ -20,15 +19,21 @@ namespace CompanionHoarder
                 string text = xmlNode.Name.ToLower();
                 if (text != null)
                 {
-                    
-
-                    #region Companion
-                    if (text == "CompanionNumber") { this.CompanionNumber = int.Parse(xmlNode.InnerText); }
-                    if (text == "CompanionLimit") { this.CompanionLimit = int.Parse(xmlNode.InnerText); }
+                    #region Companions
+                    if (text == "CompanionHoarderMode")
+                    {
+                        if (xmlNode.InnerText == "Number") { this.CompanionHoarderMode = "Number"; }
+                         else { this.CompanionHoarderMode = "default"; }
+                    }
+                    if (text == "CompanionAmount") { this.CompanionNumber = int.Parse(xmlNode.InnerText); }
                     #endregion
 
                  
+               
 
+                
+
+                   
                 }
             }
         }
